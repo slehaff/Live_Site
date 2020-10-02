@@ -26,7 +26,7 @@ SECRET_KEY = 'ws%l+fi%(m_8)e*@hkv3ntcd8&+_disg(*!a^pa$_uk*z)h@h&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', '192.168.0.33','10.11.131.190']
+ALLOWED_HOSTS = ['localhost','127.0.0.1', 'samir-nitro-an515-53.local', '192.168.0.33','10.11.131.190']
 
 
 # Application definition
