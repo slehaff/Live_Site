@@ -10,6 +10,7 @@ from .forms import PicForm
 # from scan_project.models import Scanner
 # from scan_project.settings import MEDIA_ROOT
 
+@csrf_exempt
 def logon(request):
     RESPONSE = {
         'apiurl': 'http://django.holmnet.dk/api/',
@@ -39,7 +40,7 @@ def logon(request):
 def find_scanner_clinic(scannerid):
     print('Scannerid:',scannerid)
     return 1
-
+@csrf_exempt
 def save_uploaded_file(handle, filepath):
     print ('Handle: ', handle)
     print ('Filename', filepath)
@@ -50,6 +51,8 @@ def save_uploaded_file(handle, filepath):
 
 @csrf_exempt
 def pic(request):
+
+    print('picd')
     
     picform = PicForm()
     mycontext = {
@@ -62,6 +65,7 @@ def pic(request):
         #print('FILES: ', request.FILES)
         picform = PicForm(request.POST, request.FILES)
         if picform.is_valid():
+            print('valid')
             save_uploaded_file(request.FILES['Pic1'], '/home/samir/dblive/scan/static/scan_image_folder/black.png')
             save_uploaded_file(request.FILES['Pic2'], '/home/samir/dblive/scan/static/scan_image_folder/color.png')
             save_uploaded_file(request.FILES['Pic3'], '/home/samir/dblive/scan/static/scan_image_folder/high.png')
