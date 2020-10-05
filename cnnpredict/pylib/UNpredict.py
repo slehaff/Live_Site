@@ -330,10 +330,10 @@ folder = '/home/samir/Desktop/blender/pycode/scans/render'
 Lmodel = load_L_model()
 Hmodel = load_H_model()
 
-for i in range(2):
+for i in range(20):
     folder = '/home/samir/Desktop/blender/pycode/scans/render'
     print('i:', i)
-    # mask(folder+str(i)+'/')
+    mask(folder+str(i)+'/')
     # unwrap_k(folder + str(i)+'/')
     # makemonohigh(folder+'i')
     nnHprocess(folder + str(i)+'/')
