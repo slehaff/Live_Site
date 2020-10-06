@@ -20,6 +20,8 @@ import time
 import nnwrap as nnw
 import argparse
 import sys
+import myglobals
+
 
 
 
