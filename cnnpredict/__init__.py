@@ -1,3 +1,6 @@
+# this module containns an input thread for reading input buffers from scanner upload
+# The module reads n buffers over once 100 buffers have been received
+
 import time
 import myglobals
 import threading

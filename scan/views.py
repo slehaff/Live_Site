@@ -10,9 +10,7 @@ import myglobals
 import numpy as np
 import cv2
 
-# from web.config import APP_NAME
-# from scan_project.models import Scanner
-# from scan_project.settings import MEDIA_ROOT
+# The module receives http buffer transfers from the scanner and adds them to a global Q, defined in myglobals
 
 @csrf_exempt
 def logon(request):

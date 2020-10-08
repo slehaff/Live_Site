@@ -1,3 +1,6 @@
+# This module plots a row in 2 different files for comparing fringe and wral patterns between different files
+
+
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
@@ -27,17 +30,17 @@ def makemonohigh(folder):
     cv2.imwrite(folder+'monohigh.png', monohigh)
     return
 
-folder1 = '/home/samir/Desktop/blender/pycode/inputscans/render1'
-folder2 = '/home/samir/Desktop/blender/pycode/scanplanes/render3'
+folder1 = '/home/samir/Desktop/blender/pycode/160planes/render2'
+folder2 = '/home/samir/Desktop/blender/pycode/160planes/render12'
 
 monohigh = np.zeros((H, W), dtype=np.float64)
 
-high = folder2 + '/blenderimage0.png'
+high = folder2 + '/cnnwrap1.png'
 colorhigh = cv2.imread(high, 1)
 colorhigh = resize(colorhigh, W, H)
 monohigh1 = make_grayscale(colorhigh)
 
-high = folder1 + '/blenderimage0.png'
+high = folder1 + '/cnnwrap1.png'
 colorhigh = cv2.imread(high, 1)
 colorhigh = resize(colorhigh, W, H)
 monohigh2 = make_grayscale(colorhigh)
