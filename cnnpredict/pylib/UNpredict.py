@@ -20,7 +20,7 @@ import time
 import nnwrap as nnw
 import argparse
 import sys
-import myglobals
+# import myglobals
 
 
 
@@ -327,13 +327,13 @@ def makeclouds(scanfolder, count):
 ####################################################################################################################
 
 # folder = '/home/samir/serverless/new1-469/1/fringeA/' + str(i)+'.png'
-folder = '/home/samir/Desktop/blender/pycode/scans/render'
+folder = '/home/samir/Desktop/blender/pycode/inputscans/render'
 
 Lmodel = load_L_model()
 Hmodel = load_H_model()
 
-for i in range(20):
-    folder = '/home/samir/Desktop/blender/pycode/scans/render'
+for i in range(30):
+    folder = '/home/samir/Desktop/blender/pycode/inputscans/render'
     print('i:', i)
     mask(folder+str(i)+'/')
     # unwrap_k(folder + str(i)+'/')
@@ -344,7 +344,7 @@ for i in range(20):
     makeDepth(folder+ str(i)+ '/', 199)
     folder=folder + str(i) +'/'
     generate_pointcloud(folder + 'blendertexture.png', folder + 'mask.png', folder + 'nndepth.png', folder +'pointcl-nndepth.ply')
-    generate_pointcloud(folder + 'blendertexture.png', folder + 'mask.png', folder + 'unwrap.png', folder +'pointcl-unw.ply')
+    # generate_pointcloud(folder + 'blendertexture.png', folder + 'mask.png', folder + 'unwrap.png', folder +'pointcl-unw.ply')
 
     # unw('scans', 44)
     # depth('scans', 44, 199)
