@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'scan',
     'calibrate',
     'cnnpredict',
+    'train',
     'prochain',
     ]
 
